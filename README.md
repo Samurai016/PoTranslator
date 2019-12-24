@@ -34,7 +34,7 @@ $ potranslator -p <InputFile> -l <OutputLanguage>
 - `<InputFile>` is the path of the .po/.pot file that PoTranslator will translate
 - `<OutputLanguage>` is the ISO code of the target language that you want that your file will be translated to (See the link above for available languages). 
 
-PoTranslator automatically detect the input language, if it is not possible, the tool will ask you for the ISO code of the input language, as you can see in the image below.
+PoTranslator automatically detect the input language, if it is not possible, the tool will ask you for the ISO code of the input language, as you can see in the image below.  
 ![Input language](./docs/screenshot1.png)
 
 ## Examples
