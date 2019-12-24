@@ -6,7 +6,7 @@
 ![NPM license](https://img.shields.io/npm/l/potranslator?style=flat-square)
 [![IBM Watson](https://img.shields.io/badge/IBM%20Watson-%23054ADA?style=flat-square&logo=ibm&logoColor=white)](https://www.ibm.com/watson/services/language-translator/)
 
-PoTranslator is a CLI tool created to automatically translate .po .pot files.
+PoTranslator is a CLI tool created to automatically translate .po/.pot files.
 
 Functionality:
 - Automatic translation
@@ -29,12 +29,10 @@ $ potranslator
 ```
 You can also provide optional parameters:
 ``` console
-$ potranslator <InputFile> <OutputLanguage>
+$ potranslator -p <InputFile> -l <OutputLanguage>
 ```
 - `<InputFile>` is the path of the .po/.pot file that PoTranslator will translate
 - `<OutputLanguage>` is the ISO code of the target language that you want that your file will be translated to (See the link above for available languages). 
-
-**You can't provide only the `<OutputLanguage>` without provide a valid `<InputFile>`**
 
 PoTranslator automatically detect the input language, if it is not possible, the tool will ask you for the ISO code of the input language, as you can see in the image below.
 ![Input language](./docs/screenshot1.png)
@@ -48,12 +46,12 @@ $ potranslator
 ![Example 1](./docs/example1.png)
 ### With `<InputFile>` provided
 ``` console
-$ potranslator ./Documents/en.po
+$ potranslator -p ./Documents/en.po
 ```
 ![Example 2](./docs/example2.png)
 ### With `<InputFile>` and `<OutputLanguage>` provided (and output file existing yet)
 ``` console
-$ potranslator ./Documents/en.po it
+$ potranslator -p ./Documents/en.po -l it
 ```
 ![Example 3](./docs/example3.png)
 

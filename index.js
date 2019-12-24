@@ -26,10 +26,7 @@ const run = async () => {
   try {
     //Initialization
     const translationModels = (await translator.listModels()).result.models;
-    const initialData = {
-      defaultPath: process.argv[2],
-      outputLanguage: process.argv[3]
-    };
+    const initialData = util.parseInitialData(process.argv);
 
     var data = await inquirer.askConfiguration(initialData, translationModels);
 
