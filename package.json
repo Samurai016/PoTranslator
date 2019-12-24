@@ -1,0 +1,37 @@
+{
+  "name": "potranslator",
+  "version": "1.0.1",
+  "description": "CLI tool for translate .po/.pot files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Samurai016/PoTranslator"
+  },
+  "author": "Nicolò Rebaioli <niko.reba@gmail.com> (https://rebaioli.altervista.org/)",
+  "license": "MIT",
+  "bin": {
+    "potranslator": "./index.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.35.2",
+    "axios": "^0.19.0",
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "configstore": "^5.0.0",
+    "figlet": "^1.2.4",
+    "ibm-watson": "^5.2.1",
+    "inquirer": "^7.0.1",
+    "inquirer-prompt-suggest": "^0.1.0",
+    "is-valid-path": "^0.1.1",
+    "lodash": "^4.17.15",
+    "minimist": "^1.2.0",
+    "ora": "^4.0.3",
+    "simple-git": "^1.129.0",
+    "touch": "^3.1.0"
+  }
+}
