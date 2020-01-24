@@ -35,7 +35,7 @@ const run = async () => {
       data.defaultPath = initialData.defaultPath;
     }
     if (!data.inputLanguage) {
-      data.inputLanguage = util.filenameFromPath(data.defaultPath).trim().substring(0,2);
+      data.inputLanguage = (await inquirer.askInputLanguage(translationModels)).inputLanguage;
     }
     if (!data.outputLanguage) {
       data.outputLanguage = initialData.outputLanguage;
@@ -48,7 +48,7 @@ const run = async () => {
     spinner.start();
 
     var translations = await translator.translate({
-      text: strings.map(obj => obj.string),
+      text: strings.map(obj => obj.string || obj.id),
       inputLanguage: data.inputLanguage,
       outputLanguage: data.outputLanguage
     });
@@ -64,7 +64,11 @@ const run = async () => {
      
     for (var i=0; i<translations.length; i++) {
       if (strings[i].string !== tests[i] && !strings[i].string.includes("http")) {
-        translations[i] = (await inquirer.askTranslation(strings[i].string, translations[i])).translation;
+        translations[i] = (await inquirer.askTranslation(
+          strings[i].string || strings[i].id, 
+          translations[i], 
+          translations.length, 
+          i)).translation;
       }
       if (strings[i].string.includes("http")) {
         translations[i] =  strings[i].string
