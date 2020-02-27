@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "translator", "translate", "translation", "po", "pot", "tool", "cli", "ibm", "cloud"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Samurai016/PoTranslator"
