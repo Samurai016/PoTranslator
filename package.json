@@ -1,6 +1,6 @@
 {
   "name": "potranslator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CLI tool for translate .po/.pot files",
   "main": "index.js",
   "scripts": {
